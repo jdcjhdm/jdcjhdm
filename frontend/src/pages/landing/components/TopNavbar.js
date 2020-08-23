@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 	logo: {
 		height: '50px',
 		width: '50px',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('xs')]: {
 			height: '35px',
 			width: '35px',
 		},
@@ -26,26 +26,26 @@ const useStyles = makeStyles(theme => ({
 		marginRight: 20,
 		color: '#154d69',
 		textAlign: 'right',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('xs')]: {
 			marginRight: 10,
 		},
 	},
 	message: {
 		fontSize: '1.1em',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('xs')]: {
 			fontSize: '0.8em',
 		},
 	},
 	signUpBtn: {
 		color: '#154d69',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('xs')]: {
 			fontSize: '0.85em',
 		},
 	},
 	signInBtn: {
 		marginRight: 3,
 		color: '#154d69',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('xs')]: {
 			fontSize: '0.85em',
 		},
 	},
