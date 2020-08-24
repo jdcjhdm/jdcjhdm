@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../../../utils/img/rsz_logo.jpg';
-import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 	logo: {
 		height: '50px',
 		width: '50px',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			height: '35px',
 			width: '35px',
 		},
@@ -19,43 +19,49 @@ const useStyles = makeStyles(theme => ({
 	whiteBG: {
 		backgroundColor: '#FFF',
 	},
-	gridPadding: {
+	BoxPadding: {
 		padding: '10px 0',
+	},
+	wrapper: {
+		display: 'flex',
+		alignItems: 'center',
+		minWidth: '150px',
 	},
 	messageWrap: {
 		marginRight: 20,
 		color: '#154d69',
 		textAlign: 'right',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			marginRight: 10,
 		},
 	},
 	message: {
 		fontSize: '1.1em',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			fontSize: '0.8em',
 		},
 	},
 	signUpBtn: {
 		color: '#154d69',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			fontSize: '0.85em',
 		},
 	},
 	signInBtn: {
-		marginRight: 3,
+		marginLeft: 3,
 		color: '#154d69',
-		[theme.breakpoints.down('xs')]: {
+		[theme.breakpoints.down('sm')]: {
 			fontSize: '0.85em',
 		},
 	},
-	toolbarSecondary: {
+	toolbar: {
 		overflowX: 'auto',
 		padding: 0,
 		justifyContent: 'space-between',
 	},
 	btnContainer: {
 		direction: 'ltr',
+		minWidth: '150px',
 	},
 }));
 
@@ -63,12 +69,12 @@ const Navbar = () => {
 	const classes = useStyles();
 
 	return (
-		<Grid container className={classes.whiteBG}>
+		<Box className={classes.whiteBG}>
 			<Container>
-				<Toolbar component='nav' variant='regular' className={classes.toolbarSecondary}>
-					<Grid item xs={6} md={6} container alignItems='center'>
+				<Toolbar component='nav' variant='regular' className={classes.toolbar}>
+					<Box className={classes.wrapper}>
 						<img src={Logo} alt='Logo' className={classes.logo} />
-						<Grid item className={classes.messageWrap}>
+						<Box component='span' className={classes.messageWrap}>
 							<Typography display='inline' className={classes.message}>
 								جلب رضایت شما
 							</Typography>
@@ -76,17 +82,17 @@ const Navbar = () => {
 							<Typography display='inline' className={classes.message}>
 								اولین اولویت ماست
 							</Typography>
-						</Grid>
-					</Grid>
-					<Grid item xs={6} md={6} className={classes.btnContainer}>
+						</Box>
+					</Box>
+					<Box className={classes.btnContainer}>
 						<Button variant='outlined' color='primary' className={classes.signUpBtn}>
 							عضویت
 						</Button>
 						<Button className={classes.signInBtn}>ورود</Button>
-					</Grid>
+					</Box>
 				</Toolbar>
 			</Container>
-		</Grid>
+		</Box>
 	);
 };
 

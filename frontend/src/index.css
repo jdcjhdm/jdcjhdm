@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'TizTypeFont';
-	src: url(./utils/fonts/WebFonts/fonts/woff/IRANSansWeb.woff) format('woff'),
-		url(./utils/fonts/WebFonts/fonts/woff2/IRANSansWeb.woff2) format('woff2'),
+	src: url('./utils/fonts/WebFonts/fonts/woff/IRANSansWeb.woff') format('woff'),
+		url('./utils/fonts/WebFonts/fonts/woff2/IRANSansWeb.woff2') format('woff2'),
 		url('./utils/fonts/IRANSans.ttf') format('truetype');
 }
 
@@ -17,4 +17,16 @@ html {
 
 body {
 	font-family: 'TizTypeFont', sans-serif;
+}
+
+#password-helper-text {
+	direction: rtl;
+	text-align: right;
+	margin-right: 0;
+}
+
+@media only screen and (max-width: 1370px) {
+	.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+		padding: 5px !important;
+	}
 }

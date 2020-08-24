@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 			color: 'rgb(255,255,255,0.95)',
 		},
 		[theme.breakpoints.down('sm')]: {
-			fontSize: '1em',
+			fontSize: '0.8em',
 		},
 	},
 }));

@@ -5,22 +5,27 @@ import Link from '@material-ui/core/Link';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
 	button: {
 		direction: 'ltr',
+		marginBottom: theme.spacing(6),
+		[theme.breakpoints.down('sm')]: {
+			fontSize: '0.7em',
+			marginBottom: theme.spacing(4),
+		},
 	},
-});
+}));
 
 const Footer = () => {
 	const classes = useStyles();
 
 	return (
 		<Grid container justify='center' alignItems='center'>
-			<Link href='#why-tiz-type' color='secondary' underline='none'>
-				<Button variant='outlined' color='secondary' startIcon={<ExpandMoreIcon />} className={classes.button}>
+			<Button variant='outlined' color='secondary' startIcon={<ExpandMoreIcon />} className={classes.button}>
+				<Link href='#why-tiz-type' color='secondary' underline='none'>
 					چرا تیزتایپ؟
-				</Button>
-			</Link>
+				</Link>
+			</Button>
 		</Grid>
 	);
 };
