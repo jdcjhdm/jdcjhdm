@@ -1,23 +1,37 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-// import Zoom from 'react-reveal/Zoom';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles({
+	container: {
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	heading: {
+		padding: '0 0 1em',
+		fontSize: '2em',
+	},
+	subHeading: {
+		fontSize: '1.3em',
+		color: 'rgb(0,0,0,0.5)',
+	},
+});
 
 const Heading = () => {
+	const classes = useStyles();
+
 	return (
-		<div className='wtt-container' id='why-tiz-type'>
-			<Grid container direction='column' justify='center' alignItems='center'>
-				{/* <Zoom>
-					<Grid item style={{ paddingTop: 100 }}>
-						<h2 className='wtt-heading'>چرا تیزتایپ؟</h2>
-					</Grid>
-				</Zoom>
-				<Zoom delay={200}>
-					<Grid item style={{ paddingTop: 10 }}>
-						<p className='wtt-paragraph'>سریع و امن، راحت و کاربرپسند، کارا و به‌صرفه</p>
-					</Grid>
-				</Zoom> */}
-			</Grid>
-		</div>
+		<Box id='why-tiz-type' className={classes.container}>
+			<Typography componant='h2' variant='body2' className={classes.heading}>
+				چرا تیزتایپ؟
+			</Typography>
+			<Typography variant='body2' className={classes.subHeading}>
+				سریع و امن، راحت و کاربرپسند، کارا و به‌صرفه
+			</Typography>
+		</Box>
 	);
 };
 

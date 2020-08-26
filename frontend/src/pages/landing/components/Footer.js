@@ -8,10 +8,15 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
 	button: {
 		direction: 'ltr',
+	},
+	link: {
 		marginBottom: theme.spacing(6),
 		[theme.breakpoints.down('sm')]: {
 			fontSize: '0.7em',
 			marginBottom: theme.spacing(4),
+		},
+		'&:hover': {
+			cursor: 'hover',
 		},
 	},
 }));
@@ -21,11 +26,11 @@ const Footer = () => {
 
 	return (
 		<Grid container justify='center' alignItems='center'>
-			<Button variant='outlined' color='secondary' startIcon={<ExpandMoreIcon />} className={classes.button}>
-				<Link href='#why-tiz-type' color='secondary' underline='none'>
+			<Link href='#why-tiz-type' color='secondary' underline='none' className={classes.link}>
+				<Button variant='outlined' color='secondary' startIcon={<ExpandMoreIcon />} className={classes.button}>
 					چرا تیزتایپ؟
-				</Link>
-			</Button>
+				</Button>
+			</Link>
 		</Grid>
 	);
 };
