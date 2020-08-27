@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
@@ -24,14 +25,16 @@ const Heading = () => {
 	const classes = useStyles();
 
 	return (
-		<Box id='why-tiz-type' className={classes.container}>
-			<Typography componant='h2' variant='body2' className={classes.heading}>
-				چرا تیزتایپ؟
-			</Typography>
-			<Typography variant='body2' className={classes.subHeading}>
-				سریع و امن، راحت و کاربرپسند، کارا و به‌صرفه
-			</Typography>
-		</Box>
+		<Container>
+			<Box id='why-tiz-type' className={classes.container}>
+				<Typography componant='h2' variant='body2' className={classes.heading}>
+					چرا تیزتایپ؟
+				</Typography>
+				<Typography variant='body2' className={classes.subHeading}>
+					سریع و امن، راحت و کاربرپسند، کارا و به‌صرفه
+				</Typography>
+			</Box>
+		</Container>
 	);
 };
 

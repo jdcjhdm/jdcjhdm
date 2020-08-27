@@ -72,12 +72,11 @@ const SignUpForm = () => {
 						/>
 					</Grid>
 					<Grid item xs={12}>
-						<label htmlFor='mobile'>شماره موبایل</label>
+						<label htmlFor='email'>ایمیل</label>
 						<TextField
-							id='mobile'
-							name='mobile'
+							id='email'
+							name='email'
 							variant='outlined'
-							placeholder='نمونه *********09'
 							className={classes.textfield}
 							size='small'
 							fullWidth
