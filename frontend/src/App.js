@@ -1,16 +1,9 @@
-import React from 'react';
-import Landing from './pages/landing/Landing';
-import WhyTizType from './pages/why TizType/WhyTizType';
-import Footer from './pages/footer/Footer';
+import React from "react";
+import "antd/dist/antd.css";
+import Index from "./pages/projects/Index";
 
-const App = () => {
-	return (
-		<React.Fragment>
-			<Landing />
-			<WhyTizType />
-			<Footer />
-		</React.Fragment>
-	);
-};
+function App() {
+    return <Index />;
+}
 
 export default App;
