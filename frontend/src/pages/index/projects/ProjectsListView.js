@@ -17,7 +17,7 @@ const ProjectsListView = () => {
             dataSource={projects}
             renderItem={(item) => (
                 <List.Item>
-                    <List.Item.Meta title={<Link to={`/${item.id}`}>{item.title}</Link>} description={item.content} />
+                    <List.Item.Meta title={<Link to={`/projects/${item.id}`}>{item.title}</Link>} description={item.content} />
                 </List.Item>
             )}
         />

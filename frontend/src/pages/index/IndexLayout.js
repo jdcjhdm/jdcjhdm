@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 
 const { Header, Content } = Layout;
 
-const CustomLayout = (props) => {
+const IndesLayout = (props) => {
     return (
         <Layout className="layout">
             <Header>
-                <div className="logo" />
-                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+                <Menu mode="horizontal" theme="dark" defaultSelectedKeys={["1"]}>
                     <Menu.Item key="1">
-                        <Link to="/home">Projects</Link>
+                        <Link to="/">Home Page</Link>
                     </Menu.Item>
                     <Menu.Item key="2">
+                        <Link to="/projects">Projects</Link>
+                    </Menu.Item>
+                    <Menu.Item key="3">
                         <Link to="/add">Add New Project</Link>
                     </Menu.Item>
                 </Menu>
@@ -27,4 +29,4 @@ const CustomLayout = (props) => {
     );
 };
 
-export default CustomLayout;
+export default IndesLayout;

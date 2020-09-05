@@ -1,15 +1,17 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import ProjectsListView from "./pages/projects/components/ProjectsListView";
-import ProjectDetailView from "./pages/projects/components/ProjectDetailView";
-import Form from "./pages/projects/components/Form";
+import { Route, Switch } from "react-router-dom";
+import ProjectsListView from "./pages/index/projects/ProjectsListView";
+import ProjectDetailView from "./pages/index/projects/ProjectDetailView";
+import Form from "./pages/index/add-project/Form";
+import HomePage from "./pages/index/home/HomePage";
 
 const BaseRouter = () => (
-    <div>
-        <Route exact path="/home" component={ProjectsListView} />
-        <Route exact path="/:projectID" component={ProjectDetailView} />
+    <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/projects" component={ProjectsListView} />
         <Route exact path="/add" component={Form} />
-    </div>
+        <Route exact path="/projects/:projectID" component={ProjectDetailView} />
+    </Switch>
 );
 
 export default BaseRouter;

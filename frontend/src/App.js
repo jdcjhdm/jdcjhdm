@@ -1,9 +1,17 @@
 import React from "react";
 import "antd/dist/antd.css";
-import Index from "./pages/projects/Index";
+import { BrowserRouter as Router } from "react-router-dom";
+import BaseRouter from "./routes";
+import IndexLayout from "./pages/index/IndexLayout";
 
 function App() {
-    return <Index />;
+    return (
+        <Router>
+            <IndexLayout>
+                <BaseRouter />
+            </IndexLayout>
+        </Router>
+    );
 }
 
 export default App;

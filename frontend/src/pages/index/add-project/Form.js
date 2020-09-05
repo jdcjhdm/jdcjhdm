@@ -1,20 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Form, Input, Button } from "antd";
 
 const ProjectForm = () => {
-    const [form] = Form.useForm();
-
-    const handleCheck = async () => {
-        try {
-            const values = await form.validateFields();
-            console.log("Success:", values);
-        } catch (errorInfo) {
-            console.log("Failed:", errorInfo);
-        }
-    };
-
+    useEffect(() => {
+        console.log("FORM");
+    }, []);
     return (
-        <Form form={form} name="dynamic_rule">
+        <Form>
             <Form.Item label="Title" rules={[{ required: true, message: "Enter a title" }]}>
                 <Input placeholder="Enter a title" />
             </Form.Item>
@@ -22,9 +14,7 @@ const ProjectForm = () => {
                 <Input placeholder="Enter some content" />
             </Form.Item>
             <Form.Item>
-                <Button type="primary" onClick={handleCheck}>
-                    Check
-                </Button>
+                <Button type="primary">Check</Button>
             </Form.Item>
         </Form>
     );
