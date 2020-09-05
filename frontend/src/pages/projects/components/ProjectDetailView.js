@@ -8,8 +8,8 @@ const ProjectDetialView = (props) => {
     useEffect(() => {
         axios.get(`http://127.0.0.1:8000/api/${projectID}`).then((res) => {
             setProject(res.data);
-            console.log("project", res.data);
         });
+        console.log("props.match", props.match);
     }, []);
     return (
         <Card title={project.title}>

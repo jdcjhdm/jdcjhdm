@@ -5,11 +5,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 const Index = () => {
     return (
-        <Router>
-            <CustomLayout>
-                <BaseRouter />
-            </CustomLayout>
-        </Router>
+        <div>
+            <Router>
+                <CustomLayout>
+                    <BaseRouter />
+                </CustomLayout>
+            </Router>
+        </div>
     );
 };
 
