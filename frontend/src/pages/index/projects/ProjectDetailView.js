@@ -20,6 +20,7 @@ const ProjectDetialView = (props) => {
             <Card title={project.title}>
                 <p>{project.content}</p>
             </Card>
+            <br />
             <Link to="/projects">
                 <Button type="primary" icon={<StepBackwardOutlined />} size="large" />
             </Link>
